@@ -1,0 +1,12 @@
+<h1>top<h1>
+
+
+  <% @works.each do |work| %>
+  <div>
+  <%= work.prname %>
+  <%= work.cre %>
+  <%= work.prm %>
+<%= link_to '見る', work_path(work) %>
+  <div>
+  <%end%>
+  <%= link_to '新規作成', new_work_path %>

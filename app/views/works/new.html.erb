@@ -1,0 +1,12 @@
+<h1>uppage</h1>
+
+<%= form_for @works do |f| %>
+
+<%= f.label '商品名' %><%= f.text_field :prname%>
+<%= f.label '名前' %><%= f.text_field :username%>
+<%= f.label '商品説明' %><%= f.text_area :prm%>
+<%= f.submit%>
+<br>
+
+<% end %>
+<%= link_to 'top', works_path %>

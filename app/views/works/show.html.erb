@@ -1,0 +1,11 @@
+<h1>個別<h1>
+
+<%= @works.username %>
+<%= @works.prname %>
+<%= @works.prm %>
+<%= link_to 'edit', edit_work_path %>
+<%= link_to 'top', works_path %>
+<%= link_to "delete", @works, method: :delete %>
+
+
+<%= link_to '購入', works_contact_path %>

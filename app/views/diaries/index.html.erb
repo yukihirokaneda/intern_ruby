@@ -1,10 +1,17 @@
 <h1>diary<h1>
 
-<% @diaries.each do |diary| %>
-<div>
-<%= diary.name %>
-<%= diary.title %>
-<%= diary.weather %>
-<%= diary.content %>
-</div>
-  <%end%>
+
+  <% @diaries.each do |diary| %>
+  <div>
+  <%= diary.name %>
+  <%= diary.title %>
+  <%= diary.weather %>
+  <%= diary.content %>
+
+  </div>
+<%= link_to 'show', diary_path(diary) %>
+<%= link_to 'edit', edit_diary_path(diary) %>
+    <%end%>
+
+
+<%= link_to 'create', new_diary_path %>

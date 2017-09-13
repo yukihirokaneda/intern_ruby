@@ -1,0 +1,12 @@
+<hi>edit<h1>
+
+  <%=  form_for @diary do |f| %>
+
+  
+  <%= f.label 'title' %><%= f.text_field :title%>
+  <%= f.label 'name' %><%= f.text_field :name%>
+  <%= f.label 'weather' %><%= f.number_field :weather%>
+  <%= f.label 'text' %><%= f.text_area :content%>
+  <%= f.submit%>
+  <br>
+  <% end %>
