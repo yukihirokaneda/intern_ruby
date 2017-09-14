@@ -18,10 +18,9 @@ class WorksController < ApplicationController
   def create
     @works = Work.new(work_params)
 
-    if @works.save
-     redirect_to works_path
-    else
-    end
+    @works.save
+
+
   end
 
   def update
@@ -37,15 +36,19 @@ class WorksController < ApplicationController
   end
 
   def contact
+    @new_work = Work.new
     @works = Work.find(params[:id])
   end
 
   def about
     @works = Work.new
   end
+  def help
+    @works = Work.all
+  end
   private
 
     def work_params
-      params.require(:work).permit(:title,:prname,:username,:prm,:cre,:destroy,:contact,:about,:tre)
+      params.require(:work).permit(:title,:prname,:username,:prm,:cre,:destroy,:contact,:about,:tre,:mail,:help,:image)
     end
 end

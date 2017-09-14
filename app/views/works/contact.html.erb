@@ -1,17 +1,19 @@
 <h1>連絡フォーム<h1>
   <body>
-  <%= form_for @works do |f| %>
+  <%= form_for @new_work do |f| %>
 
   <%= f.label '取引連絡' %><%= f.text_area :tre %>
-  <%= f.label 'メールアドレス' %><%= f.text_field :mail %>
+
   <br>
   <%= f.submit%>
   <% end %>
 <br>
 <br>
+<%= link_to '概要', help_works_path %>
 <br>
 <hr>
-<%= @works.tre %>
+  <%=  image_tag @works.image %>
+
 <br>
 <%= @works.mail %>
 <tr>

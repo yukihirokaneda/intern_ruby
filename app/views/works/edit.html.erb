@@ -9,7 +9,16 @@
   <br>
   <%= f.label '商品説明' %><%= f.text_area :prm%>
 <br>
+  <%= f.label 'メールアドレス' %><%= f.text_field :mail %>
   <%= f.submit%>
   <br>
+
   <% end %>
+  <%= form_for @works,:url => {:action => 'update'}, :html => {:multipart => true} do |f| %>
+
+  <%= f.file_field :image %>
+  <br>
+  <%= f.submit %>
+
+<% end %>
 <%= link_to 'top', works_path %>

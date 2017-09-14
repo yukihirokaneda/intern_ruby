@@ -1,0 +1,12 @@
+<h1>投稿内容<h1>
+
+  <% @works.each do |work| %>
+<div>
+  <br>
+  <%= work.tre %>
+  <br>
+  <% end %>
+  <br>
+  <br>
+  <br>
+  <%= link_to 'top', works_path %>

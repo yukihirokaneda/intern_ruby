@@ -11,14 +11,18 @@
   <%= link_to '新規作成', new_work_path %>
   <hr>
 <h3> 商品一覧<h3>
+
   <% @works.each do |work| %>
 
-  <div>
-　<%= work.title %>
+<div>
+   <%= image_tag work.image %>
+  <br>
+<%= work.title %>
   <%= work.prname %>
   <%= work.cre %>
   <%= work.prm %>
+  <br>
 
 <%= link_to '見る', work_path(work) %>
-  <div>
+
   <%end%>
