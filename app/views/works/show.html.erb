@@ -1,11 +1,31 @@
 <h1>個別<h1>
-
-<%= @works.username %>
-<%= @works.prname %>
-<%= @works.prm %>
+  <br>
+<hr>
 <%= link_to 'edit', edit_work_path %>
 <%= link_to 'top', works_path %>
 <%= link_to "delete", @works, method: :delete %>
+<%= link_to '購入', contact_works_path(id: @works) %>
+<div>
+  <hr>
+  
+  <br>
+  <br>
+  <br>
+  商品名
+  <br>
+  <br>
+  <%= @works.prname %>
 
-
-<%= link_to '購入', works_contact_path %>
+<br>
+<br>
+出品者
+<br>
+<br>
+<%= @works.username %>
+<br>
+<br>
+商品内容
+<br>
+<br>
+<%= @works.prm %>
+<div>

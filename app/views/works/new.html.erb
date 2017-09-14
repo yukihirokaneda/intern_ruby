@@ -1,7 +1,9 @@
-<h1>uppage</h1>
+<h1>新規投稿</h1>
+<br>
+<hr>
 
 <%= form_for @works do |f| %>
-
+<%= f.label '題名' %><%= f.text_field :title%>
 <%= f.label '商品名' %><%= f.text_field :prname%>
 <%= f.label '名前' %><%= f.text_field :username%>
 <%= f.label '商品説明' %><%= f.text_area :prm%>
@@ -9,4 +11,6 @@
 <br>
 
 <% end %>
+<br>
+<hr>
 <%= link_to 'top', works_path %>

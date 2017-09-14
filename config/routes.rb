@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   resources :diaries
   resources :interns
   resources :works
-  get 'works/:id' => 'works#contact'
-  post'works/contact' => 'works#contact'
+  get 'contact/works'=> 'works#contact'
+  post'contact/works' => 'works#contact'
   get'login'   => 'sessions#new'
   post'login'   => 'sessions#create'
+  get 'about/works'=> 'works#about'
+  post 'about/works'=> 'works#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

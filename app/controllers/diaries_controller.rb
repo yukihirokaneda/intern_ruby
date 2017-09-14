@@ -5,7 +5,7 @@ class DiariesController < ApplicationController
 
 
   def show
-      @diary = Diary.find(params[:id])
+      @works = Work.find(params[:works_id])
   end
 
   def edit
@@ -35,7 +35,7 @@ end
 
   end
 
-  
+
   private
 
     def diary_params

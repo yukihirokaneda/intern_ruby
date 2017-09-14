@@ -1,6 +1,29 @@
-<h1>1<h1>
+<h1>連絡フォーム<h1>
+  <body>
   <%= form_for @works do |f| %>
 
-  <%= f.label 'ka' %><%= f.text_field :tre %>
+  <%= f.label '取引連絡' %><%= f.text_area :tre %>
+  <%= f.label 'メールアドレス' %><%= f.text_field :mail %>
+  <br>
   <%= f.submit%>
   <% end %>
+<br>
+<br>
+<br>
+<hr>
+<%= @works.tre %>
+<br>
+<%= @works.mail %>
+<tr>
+  <br>
+    <%= @works.title %>
+    <br>
+  <%= @works.prname %>
+  <br>
+  <%= @works.username %>
+  <br>
+  <%= @works.prm %>
+  <tr>
+<br>
+
+<%= link_to 'top', works_path %>

@@ -40,9 +40,12 @@ class WorksController < ApplicationController
     @works = Work.find(params[:id])
   end
 
+  def about
+    @works = Work.new
+  end
   private
 
     def work_params
-      params.require(:work).permit(:title,:prname,:username,:prm,:cre,:destroy,:contact)
+      params.require(:work).permit(:title,:prname,:username,:prm,:cre,:destroy,:contact,:about,:tre)
     end
 end

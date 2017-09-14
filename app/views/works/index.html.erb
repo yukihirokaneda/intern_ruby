@@ -1,12 +1,24 @@
-<h1>top<h1>
-
-
+<h1>とらリース<h1>
+<br>
+<hr>
+<br>
+<body>
+  個人間で物のレンタルができるサイトとらリース
+  <%= link_to '概要', about_works_path %>
+<br>
+<br>
+<br>
+  <%= link_to '新規作成', new_work_path %>
+  <hr>
+<h3> 商品一覧<h3>
   <% @works.each do |work| %>
+
   <div>
+　<%= work.title %>
   <%= work.prname %>
   <%= work.cre %>
   <%= work.prm %>
+
 <%= link_to '見る', work_path(work) %>
   <div>
   <%end%>
-  <%= link_to '新規作成', new_work_path %>

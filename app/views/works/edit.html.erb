@@ -1,11 +1,14 @@
 <hi>編集<h1>
-
+<br>
   <%=  form_for @works do |f| %>
-
+<%= f.label '題名' %><%= f.text_field :title%>
+<br>
   <%= f.label '商品名' %><%= f.text_field :prname%>
+  <br>
   <%= f.label '名前' %><%= f.text_field :username%>
+  <br>
   <%= f.label '商品説明' %><%= f.text_area :prm%>
-
+<br>
   <%= f.submit%>
   <br>
   <% end %>
