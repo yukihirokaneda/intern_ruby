@@ -49,6 +49,6 @@ class WorksController < ApplicationController
   private
 
     def work_params
-      params.require(:work).permit(:title,:prname,:username,:prm,:cre,:destroy,:contact,:about,:tre,:mail,:help,:image)
+      params.require(:work).permit(:title,:prname,:age,:username,:prm,:cre,:destroy,:contact,:about,:tre,:mail,:help,:image)
     end
 end

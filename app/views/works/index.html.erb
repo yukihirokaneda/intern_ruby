@@ -1,28 +1,43 @@
-<h1>とらリース<h1>
+
+
+<big><h1>と ら リ ー ス<h1></big>
+
 <br>
 <hr>
 <br>
-<body>
-  個人間で物のレンタルができるサイトとらリース
+
+  個人間で物のレンタルができるサイトです！！
+  <br>
+  <br>
+  自分の欲しい商品を借りちゃおう！！
   <%= link_to '概要', about_works_path %>
 <br>
+<br>
+<hr>
 <br>
 <br>
   <%= link_to '新規作成', new_work_path %>
   <hr>
-<h3> 商品一覧<h3>
+<big><h3> 商品一覧<h3></big>
 
   <% @works.each do |work| %>
 
 <div>
    <%= image_tag work.image %>
   <br>
-<%= work.title %>
+
+<font size="5">
+  <body>題:</body>
+  <%= work.title %>
+  <body>商品:</body>
   <%= work.prname %>
-  <%= work.cre %>
+  <body>紹介:</body>
   <%= work.prm %>
-  <br>
+<body>代金:</body><%= work.age %><body>円</body>
+
+
 
 <%= link_to '見る', work_path(work) %>
-
+  <br><hr></font>
+  <br>
   <%end%>

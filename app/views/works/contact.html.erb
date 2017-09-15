@@ -1,4 +1,4 @@
-<h1>連絡フォーム<h1>
+<big><h1>連絡フォーム<h1>
   <body>
   <%= form_for @new_work do |f| %>
 
@@ -16,16 +16,30 @@
 
 <br>
 <%= @works.mail %>
+<br>
+<br>
+<br>
+<br>
+  <%= @works.age %><body>円</body>
 <tr>
   <br>
+  <br>
+  <br>
+  <br>
+
     <%= @works.title %>
     <br>
+    <br>
+    <br>
+    <br>
   <%= @works.prname %>
-  <br>
+  <br><br>
   <%= @works.username %>
-  <br>
+  <br><br>
   <%= @works.prm %>
+<br>
   <tr>
 <br>
-
+<br>
 <%= link_to 'top', works_path %>
+</big>

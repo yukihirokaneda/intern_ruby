@@ -1,4 +1,4 @@
-<hi>編集<h1>
+<big>編集ページ
 <br>
   <%=  form_for @works do |f| %>
 <%= f.label '題名' %><%= f.text_field :title%>
@@ -7,6 +7,8 @@
   <br>
   <%= f.label '名前' %><%= f.text_field :username%>
   <br>
+    <%= f.label '代金' %><%= f.text_area :age%>
+    <br>
   <%= f.label '商品説明' %><%= f.text_area :prm%>
 <br>
   <%= f.label 'メールアドレス' %><%= f.text_field :mail %>
@@ -22,3 +24,4 @@
 
 <% end %>
 <%= link_to 'top', works_path %>
+</big>
